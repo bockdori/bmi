@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+BMI List!!
+{% for object in object_list %}
+<table>
+    <tr>
+        <td><a href="{% url 'detail' object.id %}">{{object.height}}</a></td>
+        <td>{{object.weight}}</td>
+        <td><a href="{% url 'update' object.id %}">수정</a></td>
+        <td><a href="{% url 'delete' object.id %}">삭제</a></td>
+    </tr>
+</table>
+{% endfor %}
+<a href="{% url 'enter' %}">BMI 등록</a>
+</body>
+</html>
